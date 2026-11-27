@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akisha Facundo | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fce4ec, #eadcf8, #f8e8f5);
+            color: #55405f;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.65);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #9866a8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #71547e;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c17eae;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 12%;
+        }
+
+        .hero small {
+            color: #a477aa;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 65px);
+            color: #74517f;
+            margin: 15px 0;
+        }
+
+        .hero h2 {
+            color: #b17da9;
+            font-weight: 500;
+            font-size: 25px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 20px 0;
+            color: #715e78;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #b68ac2;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            width: fit-content;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #9568a5;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 75px 12%;
+        }
+
+        .section-title {
+            color: #805b8b;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.65);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(130,90,140,0.08);
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .interest {
+            background: rgba(255,255,255,0.7);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .interest:hover {
+            transform: translateY(-5px);
+        }
+
+        .interest h3 {
+            color: #956b9f;
+        }
+
+        .interest p {
+            font-size: 14px;
+            color: #806e85;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255,255,255,0.5);
+            color: #856d8b;
+            font-size: 13px;
+        }
+
+        @media(max-width:600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">AKISHA F.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#goals">Goals</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <div class="hero" id="home">
+        <small>WELCOME TO MY PERSONAL PORTFOLIO</small>
+
+        <h1>Hi, I'm Akisha Facundo.</h1>
+
+        <h2>Aspiring IT Professional</h2>
+
+        <p>
+            A Bachelor of Science in Information Technology
+            student at National University – Clark.
+            Passionate about technology, creativity,
+            and continuous learning.
+        </p>
+
+        <a href="#about" class="btn">Discover More</a>
+    </div>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card">
+            <p>
+                Hello! I am Akisha Facundo, currently pursuing
+                a Bachelor of Science in Information Technology
+                at National University – Clark.
+
+                <br><br>
+
+                I am a motivated and curious student who enjoys
+                exploring technology, learning new skills, and
+                discovering creative ways to solve problems.
+
+                <br><br>
+
+                I believe that education and continuous
+                improvement are important steps toward
+                achieving my dreams.
+            </p>
+        </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="interests">
+        <h2 class="section-title">My Interests</h2>
+
+        <div class="interests">
+
+            <div class="interest">
+                <h3>💻 Technology</h3>
+                <p>
+                    Exploring digital innovations
+                    and new technologies.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>🎨 Creative Design</h3>
+                <p>
+                    Expressing creativity through
+                    digital designs.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>🌐 Web Development</h3>
+                <p>
+                    Learning how to create
+                    and design websites.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>📚 Learning</h3>
+                <p>
+                    Developing knowledge and
+                    discovering new skills.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MY GOALS -->
+    <section id="goals">
+        <h2 class="section-title">My Goals</h2>
+
+        <div class="card">
+            <p>
+                My goal is to continuously develop my technical
+                knowledge, strengthen my programming skills,
+                and gain valuable experience in the IT industry.
+
+                I aspire to become a skilled IT professional
+                who can create meaningful solutions through
+                technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Akisha Facundo | Personal Portfolio</p>
+        <p>BS Information Technology | NU Clark</p>
+    </footer>
+
+</body>
+</html>
