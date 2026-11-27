@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akisha Facundo | Portfolio</title>
+
+    <title>Akisha Facundo | Personal Portfolio</title>
 
     <style>
         * {
@@ -16,10 +17,18 @@
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #fce4ec, #eadcf8, #f8e8f5);
+            background: linear-gradient(
+                135deg,
+                #fce4ec,
+                #eadcf8,
+                #f8e8f5
+            );
             color: #55405f;
             line-height: 1.7;
+            overflow-x: hidden;
         }
+
+        /* NAVIGATION */
 
         header {
             padding: 20px 8%;
@@ -27,6 +36,10 @@
             justify-content: space-between;
             align-items: center;
             background: rgba(255,255,255,0.65);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
         }
 
         .logo {
@@ -46,18 +59,60 @@
             color: #c17eae;
         }
 
+        /* FLOWER DECORATIONS */
+
+        .flower {
+            position: absolute;
+            font-size: 32px;
+            opacity: 0.55;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .flower-one {
+            top: 150px;
+            right: 10%;
+        }
+
+        .flower-two {
+            top: 550px;
+            left: 7%;
+            font-size: 25px;
+        }
+
+        .flower-three {
+            right: 8%;
+            bottom: 100px;
+            font-size: 27px;
+        }
+
+        /* RIBBON DESIGN */
+
+        .ribbon {
+            display: inline-block;
+            background: #e8c4e9;
+            color: #805b8b;
+            padding: 5px 18px;
+            border-radius: 20px 20px 20px 4px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .ribbon::before {
+            content: "🎀 ";
+        }
+
+        /* HOME SECTION */
+
         .hero {
             min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 80px 12%;
-        }
-
-        .hero small {
-            color: #a477aa;
-            letter-spacing: 3px;
-            font-weight: bold;
+            position: relative;
         }
 
         .hero h1 {
@@ -94,8 +149,11 @@
             transform: translateY(-3px);
         }
 
+        /* GENERAL SECTIONS */
+
         section {
             padding: 75px 12%;
+            position: relative;
         }
 
         .section-title {
@@ -108,12 +166,28 @@
             background: rgba(255,255,255,0.65);
             padding: 30px;
             border-radius: 18px;
+            border: 1px solid #efd9ed;
             box-shadow: 0 5px 20px rgba(130,90,140,0.08);
         }
 
+        /* FLOWER DIVIDER */
+
+        .flower-divider {
+            text-align: center;
+            color: #c28dbd;
+            letter-spacing: 12px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* INTERESTS */
+
         .interests {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(180px, 1fr)
+            );
             gap: 20px;
         }
 
@@ -123,10 +197,12 @@
             border-radius: 15px;
             text-align: center;
             transition: 0.3s;
+            border: 1px solid #efd9ed;
         }
 
         .interest:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(130,90,140,0.12);
         }
 
         .interest h3 {
@@ -138,6 +214,8 @@
             color: #806e85;
         }
 
+        /* FOOTER */
+
         footer {
             text-align: center;
             padding: 25px;
@@ -145,6 +223,8 @@
             color: #856d8b;
             font-size: 13px;
         }
+
+        /* MOBILE RESPONSIVE */
 
         @media(max-width:600px) {
             header {
@@ -160,14 +240,33 @@
             section {
                 padding: 55px 7%;
             }
+
+            .hero {
+                padding: 60px 7%;
+            }
+
+            .flower-one {
+                right: 5%;
+                top: 120px;
+            }
         }
+
     </style>
 </head>
 
 <body>
 
+    <!-- FLOWER DECORATIONS -->
+
+    <div class="flower flower-one">🌸</div>
+    <div class="flower flower-two">🌷</div>
+    <div class="flower flower-three">✿</div>
+
+
     <!-- NAVIGATION -->
+
     <header>
+
         <div class="logo">AKISHA F.</div>
 
         <nav>
@@ -176,11 +275,17 @@
             <a href="#interests">Interests</a>
             <a href="#goals">Goals</a>
         </nav>
+
     </header>
 
+
     <!-- HOME SECTION -->
+
     <div class="hero" id="home">
-        <small>WELCOME TO MY PERSONAL PORTFOLIO</small>
+
+        <span class="ribbon">
+            WELCOME TO MY PORTFOLIO
+        </span>
 
         <h1>Hi, I'm Akisha Facundo.</h1>
 
@@ -193,14 +298,28 @@
             and continuous learning.
         </p>
 
-        <a href="#about" class="btn">Discover More</a>
+        <a href="#about" class="btn">
+            Discover More
+        </a>
+
     </div>
 
-    <!-- ABOUT ME -->
+
+    <div class="flower-divider">
+        ✿ ❀ ✿
+    </div>
+
+
+    <!-- ABOUT ME SECTION -->
+
     <section id="about">
+
+        <span class="ribbon">GET TO KNOW ME</span>
+
         <h2 class="section-title">About Me</h2>
 
         <div class="card">
+
             <p>
                 Hello! I am Akisha Facundo, currently pursuing
                 a Bachelor of Science in Information Technology
@@ -218,11 +337,23 @@
                 improvement are important steps toward
                 achieving my dreams.
             </p>
+
         </div>
+
     </section>
 
-    <!-- INTERESTS -->
+
+    <div class="flower-divider">
+        🌸 ❀ 🌸
+    </div>
+
+
+    <!-- INTERESTS SECTION -->
+
     <section id="interests">
+
+        <span class="ribbon">THINGS I LOVE</span>
+
         <h2 class="section-title">My Interests</h2>
 
         <div class="interests">
@@ -260,30 +391,66 @@
             </div>
 
         </div>
+
     </section>
 
-    <!-- MY GOALS -->
+
+    <div class="flower-divider">
+        ✿ 🌷 ✿
+    </div>
+
+
+    <!-- GOALS SECTION -->
+
     <section id="goals">
+
+        <span class="ribbon">MY DREAMS & ASPIRATIONS</span>
+
         <h2 class="section-title">My Goals</h2>
 
         <div class="card">
+
             <p>
                 My goal is to continuously develop my technical
                 knowledge, strengthen my programming skills,
                 and gain valuable experience in the IT industry.
 
+                <br><br>
+
                 I aspire to become a skilled IT professional
                 who can create meaningful solutions through
-                technology.
+                technology. I want to keep learning, growing,
+                and challenging myself to become better
+                every day.
             </p>
+
         </div>
+
     </section>
 
+
+    <div class="flower-divider">
+        🌸 ❀ 🎀 ❀ 🌸
+    </div>
+
+
     <!-- FOOTER -->
+
     <footer>
+
         <p>© 2026 Akisha Facundo | Personal Portfolio</p>
-        <p>BS Information Technology | NU Clark</p>
+
+        <p>
+            BS Information Technology |
+            National University – Clark
+        </p>
+
+        <p>Made with ♡ and creativity</p>
+
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
